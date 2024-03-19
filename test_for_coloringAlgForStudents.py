@@ -62,12 +62,6 @@ def rectangleColoringAlg():
         maxCol += 1  # Proceed to next color
         # Remove points in maximum_monotonic_subsequence from current_point_list
         current_point_list = [p for p in current_point_list if p not in points_to_remove]
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    print(f"current max col is:{maxCol}")
-    print(f"finished running rectangleColoringAlg...")
-    return
-
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     print(f"current max col is:{maxCol}")
     print(f"finished running rectangleColoringAlg...")
