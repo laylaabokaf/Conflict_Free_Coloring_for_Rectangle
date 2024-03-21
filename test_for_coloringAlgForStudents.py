@@ -5,7 +5,7 @@ from Point import Point
 maxCol = 0
 points = [Point(1, 1), Point(2, 2), Point(3, 3), Point(0, 0)]
 isOnlineAlg = False  # if RectangleAlg: =False
-STUDENTS_ID = "314800442_322801291"  # change IDs
+STUDENTS_ID = "123456789_987654321"  # change IDs
 
 
 def onlineColoringAlg(value):
@@ -62,6 +62,7 @@ def rectangleColoringAlg():
         maxCol += 1  # Proceed to next color
         # Remove points in maximum_monotonic_subsequence from current_point_list
         current_point_list = [p for p in current_point_list if p not in points_to_remove]
+    maxCol -= 1
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     print(f"current max col is:{maxCol}")
     print(f"finished running rectangleColoringAlg...")
@@ -148,10 +149,10 @@ def test_coloring_algorithm(point_list):
 
                     # If the rectangle contains points but there's no color with exactly one occurrence
                     if 1 not in color_occurrences.values():
-                        print("Test failed: There's an axis-parallel rectangle (or line) that's not conflict-free.")
+                        print("Test failed: There's an axis-parallel rectangle that's not conflict-free.")
                         return False
 
-    print("Test passed: All axis-parallel rectangles (including lines) are conflict-free.")
+    print("Test passed: All axis-parallel rectangles are conflict-free.")
     return True
 
 

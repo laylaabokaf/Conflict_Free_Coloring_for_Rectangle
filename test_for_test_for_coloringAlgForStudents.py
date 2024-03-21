@@ -3,7 +3,7 @@ from Point import Point
 maxCol = 0
 points = []
 isOnlineAlg = False  # if RectangleAlg: =False
-STUDENTS_ID = "314800442_322801291"  # change IDs
+STUDENTS_ID = "123456789_987654321"  # change IDs
 
 
 def onlineColoringAlg(value):
@@ -60,6 +60,7 @@ def rectangleColoringAlg():
         maxCol += 1  # Proceed to next color
         # Remove points in maximum_monotonic_subsequence from current_point_list
         current_point_list = [p for p in current_point_list if p not in points_to_remove]
+    maxCol -= 1
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     print(f"current max col is:{maxCol}")
     print(f"finished running rectangleColoringAlg...")
@@ -241,7 +242,7 @@ Failed = False
 
 def run_test(points, i, expected):
     result = test_coloring_algorithm(points)
-    print(f"Test number {i}: {'Passed' if result else 'Failed'} ; expected: {'Passed' if expected else 'Failed'}")
+    print(f"Test number {i}: Expected: {'Passed' if expected else 'Failed'} ; Actual: {'Passed' if result else 'Failed'}")
 
 
 run_test(points1, 1, Passed)
